@@ -1,6 +1,6 @@
 # vue-textfit-experiment
 
-This is a Vue 3 project that is an experiment to build a \<TextFit\> component using <https://github.com/STRML/textFit>
+This is a Vue 3 project that is an experiment toward building a well-behaved \<TextFit\> component using the solid "fit text to area" Javascript library at <https://github.com/STRML/textFit>
 
 ## The Problem
 

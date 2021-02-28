@@ -6,7 +6,7 @@
         1: (OK) div is unconditionally shown (single-line example)
       </div>
       <div >
-        <TextFit class="fitted-text"  :minFontSize="10" :maxFontSize="200">Here is some sample text that we want to automatically adjust to fit inside our bounding box.</TextFit>
+        <TextFit class="fitted-text"  :minFontSize="10" :maxFontSize="200">{{sampleText}}</TextFit>
       </div>
     </div>
 
@@ -15,7 +15,7 @@
         2: (OK) div is unconditionally shown (multi-line example)
       </div>
       <div>
-        <TextFit class="fitted-text" multiLine :minFontSize="10" :maxFontSize="200">Here is some sample text that we want to automatically adjust to fit inside our bounding box.</TextFit>
+        <TextFit class="fitted-text" multiLine :minFontSize="10" :maxFontSize="200">{{sampleText}}</TextFit>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
         3: (Broken) div with delayed v-show
       </div>
       <div>
-        <TextFit class="fitted-text" multiLine :minFontSize="10" :maxFontSize="200">Here is some sample text that we want to automatically adjust to fit inside our bounding box.</TextFit>
+        <TextFit class="fitted-text" multiLine :minFontSize="10" :maxFontSize="200">{{sampleText}}</TextFit>
       </div>
     </div>
 
@@ -33,7 +33,7 @@
         4: (OK) div has delayed v-show but requires explicit v-show on &lt;TextFit&gt; component
       </div>
       <div>
-        <TextFit v-show="ready" class="fitted-text" multiLine :minFontSize="10" :maxFontSize="200">Here is some sample text that we want to automatically adjust to fit inside our bounding box.</TextFit>
+        <TextFit v-show="ready" class="fitted-text" multiLine :minFontSize="10" :maxFontSize="200">{{sampleText}}</TextFit>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
         5: (Broken) div with delayed v-show, even with explicit dims to &lt;TextFit&gt; 
       </div>
       <div>
-        <TextFit class="fitted-text" :width="1024" :height="200" multiLine :minFontSize="10" :maxFontSize="200">Here is some sample text that we want to automatically adjust to fit inside our bounding box.</TextFit>
+        <TextFit class="fitted-text" :width="1024" :height="200" multiLine :minFontSize="10" :maxFontSize="200">{{sampleText}}</TextFit>
       </div>
     </div>
 
@@ -60,6 +60,7 @@ export default {
   data () {
     return {
       ready: false,
+      sampleText: "Here is some sample text that we want to automatically adjust to fit inside our bounding box.",
     }},
   mounted() {
     // Just a simple delay on when we show the div

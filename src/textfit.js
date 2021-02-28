@@ -118,8 +118,6 @@
       // Inline block ensure it takes on the size of its contents, even if they are enclosed
       // in other tags like <p>
       innerSpan.style['display'] = 'inline-block';
-      // innerSpan.style['width'] = '1024px';
-      // innerSpan.style['height'] = '200px';
       innerSpan.innerHTML = originalHTML;
       el.innerHTML = '';
       el.appendChild(innerSpan);
@@ -156,7 +154,6 @@
     low = settings.minFontSize;
     high = settings.maxFontSize;
 
-    // console.log(`textFit multiLine: ${multiLine}`)
     // Binary search for highest best fit
     var size = low;
     while (low <= high) {
@@ -176,7 +173,6 @@
       // await injection point
     }
     // found, updating font if differs:
-    // console.log(`textFit innerSpan style ${JSON.stringify(window.getComputedStyle(innerSpan))}`)
     // console.log(`textFit: result fontSize ${innerSpan.style.fontSize} -> ${size + 'px'}`)
     if( innerSpan.style.fontSize != size + 'px' ) innerSpan.style.fontSize = size + 'px';
 

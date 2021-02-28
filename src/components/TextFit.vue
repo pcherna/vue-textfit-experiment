@@ -59,7 +59,7 @@ export default {
             height = this.$props.height
           }
           this.$nextTick(() =>
-            textFit(el, this, {
+            textFit(el, {
                 width: width,
                 height: height,
                 minFontSize: this.$props.minFontSize,
